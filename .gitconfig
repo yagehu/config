@@ -1,0 +1,9 @@
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
+[user]
+	name = Yage Hu
+	email = yagehu@qq.com
+
