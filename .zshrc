@@ -98,3 +98,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+path+=(
+    $HOME/.cargo/bin
+)
+
