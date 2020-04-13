@@ -8,6 +8,9 @@ call plug#begin('~/.vim/plugged')
 
     " Coc for intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+	" Go
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
 set tabstop=4
@@ -37,4 +40,8 @@ set signcolumn=yes
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+
+" Go
+let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 

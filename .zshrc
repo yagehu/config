@@ -115,5 +115,6 @@ path+=(
     /usr/local/go/bin
     $HOME/.cargo/bin
     $HOME/.bin
+	$HOME/go/bin
 )
 
