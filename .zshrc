@@ -98,6 +98,11 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Load aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
+
 path+=(
     $HOME/.cargo/bin
 )

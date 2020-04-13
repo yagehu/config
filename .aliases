@@ -1,0 +1,2 @@
+alias Plug='nvim +PlugInstall +PlugUpdate +PlugClean +PlugUpgrade +quitall'
+
