@@ -5,3 +5,6 @@ call plug#end()
 
 set number relativenumber
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
