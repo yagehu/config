@@ -98,6 +98,9 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# Do not display username and host on prompt.
+prompt_context() {}
+
 # Load aliases
 if [ -f ~/.aliases ]; then
     . ~/.aliases
