@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 
+set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
 set number relativenumber
