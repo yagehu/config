@@ -76,3 +76,6 @@ map <C-n> :NERDTreeToggle<CR>
 let g:go_fmt_autosave = 1
 let g:go_fmt_command = "goimports"
 
+" Rust
+let g:rustfmt_autosave = 1
+
