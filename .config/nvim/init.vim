@@ -11,6 +11,9 @@ call plug#begin('~/.vim/plugged')
 
 	" Go
 	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+	" Rust
+	Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set colorcolumn=80
