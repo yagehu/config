@@ -119,5 +119,8 @@ path+=(
     $HOME/.cargo/bin
     $HOME/.bin
 	$HOME/go/bin
+
+	# Cross-compiler location
+	$HOME/opt/cross/bin
 )
 
