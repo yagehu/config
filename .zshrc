@@ -116,6 +116,7 @@ export NVM_DIR="$HOME/.nvm"
 
 path+=(
     /usr/local/go/bin
+	/home/linuxbrew/.linuxbrew/bin
     $HOME/.cargo/bin
     $HOME/.bin
 	$HOME/go/bin
