@@ -1,2 +1,3 @@
 alias Plug='nvim +PlugInstall +PlugUpdate +PlugClean +PlugUpgrade +quitall'
+alias k=kubectl
 
