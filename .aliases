@@ -1,3 +1,13 @@
 alias Plug='nvim +PlugInstall +PlugUpdate +PlugClean +PlugUpgrade +quitall'
+
+###############################################################################
+# Kubernetes
+###############################################################################
 alias k=kubectl
+
+# kcd is for switching between namespaces is the same cluster.
+alias kcd='kubectl config set-context $(kubectl config current-context) --namespace '
+###############################################################################
+# /Kubernetes
+###############################################################################
 
