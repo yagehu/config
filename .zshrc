@@ -130,3 +130,6 @@ path+=(
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 
+# zsh-autosuggestions
+source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
