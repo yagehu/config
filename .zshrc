@@ -116,14 +116,14 @@ export NVM_DIR="$HOME/.nvm"
 
 path+=(
     /usr/local/go/bin
-	/home/linuxbrew/.linuxbrew/bin
+    /home/linuxbrew/.linuxbrew/bin
     $HOME/.cargo/bin
     $HOME/.bin
-	$HOME/.local/bin
-	$HOME/go/bin
+    $HOME/.local/bin
+    $HOME/go/bin
 
-	# Cross-compiler location
-	$HOME/opt/cross/bin
+    # Cross-compiler location
+    $HOME/opt/cross/bin
 )
 
 # Kubernetes
