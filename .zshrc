@@ -119,6 +119,7 @@ path+=(
 	/home/linuxbrew/.linuxbrew/bin
     $HOME/.cargo/bin
     $HOME/.bin
+	$HOME/.local/bin
 	$HOME/go/bin
 
 	# Cross-compiler location
