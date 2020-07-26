@@ -125,6 +125,10 @@ export NVM_DIR="$HOME/.nvm"
 path+=(
     /usr/local/go/bin
     /home/linuxbrew/.linuxbrew/bin
+
+	# depot_tools
+	$HOME/dev/depot_tools
+
     $HOME/.cargo/bin
     $HOME/.bin
     $HOME/.local/bin
