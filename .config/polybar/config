@@ -1,3 +1,7 @@
 [bar/default]
-font-0 = JetBrainsMonoRegular:size=12
+modules-right = date
+
+[module/date]
+type = internal/date
+date = %Y-%m-%d%
 
