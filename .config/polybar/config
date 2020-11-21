@@ -44,7 +44,8 @@ line-size = 2
 font-0=JetBrainsMonoRegular:size=11;3
 
 modules-left = xwindow
-modules-right = pulseaudio date powermenu
+modules-center = date
+modules-right = pulseaudio battery
 
 ;                      _       _           
 ;  _ __ ___   ___   __| |_   _| | ___  ___ 
@@ -61,7 +62,22 @@ poll-interval = 5
 
 [module/date]
 type = internal/date
-date = %Y-%m-%d%
+date = %Y-%m-%d %H:%M
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = true
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
 
 [module/xwindow]
 type = internal/xwindow
@@ -73,3 +89,4 @@ label = %title%
 ;format-margin = 2
 
 ; vim:ft=dosini
+
