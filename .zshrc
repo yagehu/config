@@ -109,6 +109,9 @@ fi
 # Do not display username and host on prompt.
 prompt_context() {}
 
+# Don't show mercurial status.
+functions[prompt_hg]=""
+
 # Load aliases
 if [ -f ~/.aliases ]; then
     . ~/.aliases
@@ -136,6 +139,11 @@ path+=(
 
     # Cross-compiler location
     $HOME/opt/cross/bin
+
+	# Emscripten
+    /home/huyage/dev/wasm/emsdk
+    /home/huyage/dev/wasm/emsdk/node/12.18.1_64bit/bin
+    /home/huyage/dev/wasm/emsdk/upstream/emscripten
 )
 
 # Kubernetes
@@ -145,3 +153,11 @@ complete -F __start_kubectl k
 # zsh-autosuggestions
 source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+
+# Wasmer
+export WASMER_DIR="/home/huyage/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+export WASMTIME_HOME="$HOME/.wasmtime"
+
+export PATH="$WASMTIME_HOME/bin:$PATH"
