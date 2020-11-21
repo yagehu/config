@@ -9,11 +9,11 @@ call plug#begin('~/.vim/plugged')
     " Coc for intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-	" Go
-	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    " Go
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-	" Rust
-	Plug 'rust-lang/rust.vim'
+    " Rust
+    Plug 'rust-lang/rust.vim'
 call plug#end()
 
 set colorcolumn=80
@@ -78,4 +78,9 @@ let g:go_fmt_command = "goimports"
 
 " Rust
 let g:rustfmt_autosave = 1
+
+:set listchars=tab:>-,trail:~,extends:>,precedes:<
+noremap <F5> :set list!<CR>
+inoremap <F5> <C-o>:set list!<CR>
+cnoremap <F5> <C-c>:set list!<CR>
 
