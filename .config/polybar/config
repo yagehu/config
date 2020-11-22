@@ -1,6 +1,6 @@
 [colors]
 background = ${xrdb:background:#80000000}
-foreground = ${xrdb:color7:#ff5555}
+foreground = ${xrdb:color7:#ffffff}
 
 [bar/default]
 enable-ipc = true
