@@ -19,6 +19,8 @@ call plug#end()
 set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
+set expandtab
+set shiftwidth=4
 set number relativenumber
 
 " TextEdit might fail if hidden is not set.
@@ -79,8 +81,13 @@ let g:go_fmt_command = "goimports"
 " Rust
 let g:rustfmt_autosave = 1
 
-:set listchars=tab:>-,trail:~,extends:>,precedes:<
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set list
 noremap <F5> :set list!<CR>
 inoremap <F5> <C-o>:set list!<CR>
 cnoremap <F5> <C-c>:set list!<CR>
 
+" .witx files
+autocmd BufRead,BufNewFile *.witx setfiletype witx
+autocmd FileType witx setlocal shiftwidth=2 tabstop=2
+autocmd FileType witx setlocal foldmethod=indent

@@ -41,7 +41,7 @@ border-size = 15
 
 line-size = 2
 
-font-0=JetBrainsMonoRegular:size=11;3
+font-0=JetBrainsMono-Regular:size=12;3
 
 modules-left = xwindow
 modules-center = date
@@ -59,6 +59,20 @@ full-at = 99
 battery = BAT0
 adapter = AC
 poll-interval = 5
+animation-charging-0 = 🔋
+animation-charging-1 = 🔋
+animation-charging-2 = 🔋
+animation-charging-3 = 🔋
+animation-charging-4 = 🔋
+animation-discharging-0 = 🔋
+animation-discharging-1 = 🔋
+animation-discharging-2 = 🔋
+animation-discharging-3 = 🔋
+animation-discharging-4 = 🔋
+animation-charging-foreground = ${colors.foreground}
+animation-charging-framerate = 750
+format-charging = <animation-charging> <label-charging>
+label-charging = %percentage%%
 
 [module/date]
 type = internal/date
