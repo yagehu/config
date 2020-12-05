@@ -76,7 +76,10 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -139,3 +142,4 @@ if type "kubectl" > /dev/null; then
     source <(kubectl completion zsh)
     complete -F __start_kubectl k
 fi
+if [ -e /home/huyage/.nix-profile/etc/profile.d/nix.sh ]; then . /home/huyage/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
