@@ -113,7 +113,10 @@ if [ -f ~/.aliases ]; then
 fi
 
 # FZF
-export FZF_DEFAULT_COMMAND="rg --hidden --no-ignore-vcs --files"
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND="rg --files"
+    export FZF_DEFAULT_OPTS="-m --height 50% --border"
+fi
 
 # Node version manager
 export NVM_DIR="$HOME/.nvm"

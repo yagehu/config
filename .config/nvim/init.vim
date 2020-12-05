@@ -16,6 +16,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'rust-lang/rust.vim'
 call plug#end()
 
+let mapleader = " "
+
 set colorcolumn=80
 set tabstop=4
 set shiftwidth=4
@@ -57,6 +59,10 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" FZF
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>r :Rg<CR>
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
