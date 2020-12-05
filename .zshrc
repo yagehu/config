@@ -1,16 +1,8 @@
-# Brew completions must be done before Oh My Zsh.
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-
-  autoload -Uz compinit
-  compinit
-fi
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/huyage/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -137,9 +129,5 @@ path+=(
     $HOME/go/bin
 )
 
-# Kubernetes
-if type "kubectl" > /dev/null; then
-    source <(kubectl completion zsh)
-    complete -F __start_kubectl k
-fi
+# Nix
 if [ -e /home/huyage/.nix-profile/etc/profile.d/nix.sh ]; then . /home/huyage/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
