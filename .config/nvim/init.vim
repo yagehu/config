@@ -9,12 +9,14 @@ call plug#begin('~/.vim/plugged')
     " Coc for intellisense
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Go
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
     " Rust
     Plug 'rust-lang/rust.vim'
+
+    " Indent guides
+    Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
+
+colorscheme default
 
 let mapleader = " "
 
@@ -60,6 +62,11 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
 " FZF
 nnoremap <silent> <leader>f :Files<CR>
 nnoremap <silent> <leader>r :Rg<CR>
@@ -79,10 +86,6 @@ nmap <silent> gr <Plug>(coc-references)
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
-
-" Go
-let g:go_fmt_autosave = 1
-let g:go_fmt_command = "goimports"
 
 " Rust
 let g:rustfmt_autosave = 1
