@@ -128,6 +128,11 @@ if type yarn &> /dev/null; then
     path+=($HOME/.yarn/bin)
 fi
 
+# tgenv for managing Terragrunt versions.
+if [ -d ~/.tgenv/bin ]; then
+    path=("$HOME/.tgenv/bin" $path)
+fi
+
 path+=(
     /usr/local/go/bin
 
