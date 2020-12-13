@@ -136,3 +136,6 @@ path+=(
     $HOME/.local/bin
     $HOME/go/bin
 )
+
+# Homebrew
+eval $($HOME/.linuxbrew/bin/brew shellenv)
