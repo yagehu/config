@@ -136,6 +136,3 @@ path+=(
     $HOME/.local/bin
     $HOME/go/bin
 )
-
-# Nix
-if [ -e /home/huyage/.nix-profile/etc/profile.d/nix.sh ]; then . /home/huyage/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
