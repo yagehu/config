@@ -100,3 +100,9 @@ cnoremap <F5> <C-c>:set list!<CR>
 autocmd BufRead,BufNewFile *.witx setfiletype witx
 autocmd FileType witx setlocal shiftwidth=2 tabstop=2
 autocmd FileType witx setlocal foldmethod=indent
+
+" YAML files
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 sts=2 foldmethod=indent expandtab
+
+" WebAssembly text format (wat) files
+autocmd FileType wast setlocal shiftwidth=2 tabstop=2 sts=2 expandtab
