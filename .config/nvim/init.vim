@@ -26,6 +26,7 @@ set shiftwidth=4
 set expandtab
 set shiftwidth=4
 set number relativenumber
+set cursorline cursorcolumn
 
 " TextEdit might fail if hidden is not set.
 set hidden
