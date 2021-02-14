@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
     " Rust
     Plug 'rust-lang/rust.vim'
 
+    " TLA+
+    Plug 'florentc/vim-tla'
+
     " Indent guides
     Plug 'nathanaelkane/vim-indent-guides'
 call plug#end()
