@@ -150,3 +150,6 @@ fi
 # Wasmer
 export WASMER_DIR="$HOME/.wasmer"
 [ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# opam configuration
+test -r /home/huyage/.opam/opam-init/init.zsh && . /home/huyage/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
